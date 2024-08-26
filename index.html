@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Design Digital Interativo</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  
+   <style>
+ body {
+            font-family: 'Helvetica', sans-serif;
+            /* background-color: #2B2B2B; */
+			background-image: url('Image/sky.jpg'); no-repeat center center;
+			
+			background-size: 100%;
+			
+			background-repeat: repeat;
+			
+			
+			color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            text-align: center; /* Centraliza texto */
+			position: relative;
+        }
+
+        header {
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+			
+			background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+			backdrop-filter: blur(50px);
+			-webkit-backdrop-filter: blur(50px);
+			border-radius: 20px;
+			border: 1px solid rgba(255,255,255,0.18);
+			box-shadow: 0 8px 32 px 0 rgba(0,0,0,0.37);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        section {
+ 
+            margin: 20px auto; 
+            padding: 100px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            max-width: 1200px; 
+            text-align: left; 
+			
+			background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border-radius: 20px;
+			border: 1px solid rgba(255,255,255,0.18);
+			box-shadow: 0 8px 32 px 0 rgba(0,0,0,0.37);
+        }
+		
+		h1{
+		    color: #FFF;
+            font-size: 5.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px 
+            padding-bottom: 5px;
+            font-weight: bold; /* Destaca o subtítulo em negrito */
+		}
+
+        h2 {
+            color: #FFF;
+			text-align: left;
+            font-size: 5.8em;
+			margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 2px 
+            padding-bottom: 5px;
+            font-weight: bold; /* Destaca o subtítulo em negrito */
+        }
+		
+		h3{
+			margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 2px 
+            padding-bottom: 5px;		
+		}
+
+        p, ul li {
+            font-size: 1.2em;
+			margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+		
+        footer {
+            background-color: #7C5E66; /* Marrom-acinzentado */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5);
+			
+			background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border-radius: 20px;
+			border: 1px solid rgba(255,255,255,0.18);
+			box-shadow: 0 8px 32 px 0 rgba(0,0,0,0.37);
+        }
+		
+		.glass-effect{
+			background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border-radius: 20px;
+			border: 1px solid rgba(255,255,255,0.18);
+			box-shadow: 0 8px 32 px 0 rgba(0,0,0,0.37);
+		}
+		.right {
+			text-align: right;
+			margin-bottom: 30px;
+		}
+		
+		.blur-effect {
+			filter: blur(100px);
+		}
+		
+		#paragrafo-vermelho {
+		color: #A53132; /* Vermelho */
+		}
+		
+		.imagem-com-margem {
+			margin-top: 20px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
+		
+		.imagem-com-margem-left {
+			margin-top: 20px;
+			margin-left: 20px;
+			margin-bottom: 20px;
+		}
+		
+	 .carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Altere conforme a altura do carrossel */
+  }
+  
+  .carousel-image {
+    width: 50%; /* Ajuste a largura conforme necessário */
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+  }
+  
+  .carousel-text {
+    max-width: 50%; /* Ajuste conforme necessário */
+  }
+  
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }	
+
+        /* Media Queries para Responsividade */
+        
+		@media (max-width: 768px) {
+            .imagem-canto {
+                width: 100px; /* Ajusta o tamanho da imagem em telas menores */
+                bottom: 5px;  /* Ajusta a posição da imagem em relação ao fundo */
+                right: 5px;   /* Ajusta a posição da imagem em relação à direita */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .imagem-canto {
+                width: 80px; /* Ajusta ainda mais o tamanho da imagem em telas muito pequenas */
+            }
+        }
+		
+    </style>
+  
+  
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  
+<header>
+    <h1>Design Digital Interativo</h1>
+</header>
+
+
+<section >
+	<h2>Autores</h2>
+	<p>Guilherme Alves Teixeira da Silva | Matrícula: 568154</p>
+	<!-- <img src="Image/gui.png" alt="Guilherme Alves"class="imagem-canto"> -->
+	<p>Felipe Moreira Pontes da Rocha | Matrícula: 564652</p>
+</section>
+
+
+<section>
+    <h2 class = right >4 Princípios Básicos do Design</h2>
+    <p><strong><span style="color: 	#ff6961;">1. Alinhamento:</span></strong> O alinhamento cria uma conexão visual entre os elementos da página, ajudando a organizar o layout e a guiar o olhar do usuário.</p>
+    <p><strong><span style="color: 	#ff6961;">2. Repetição:</span></strong> A repetição de elementos visuais como cores, formas e fontes cria consistência e reforça a identidade visual do projeto.</p>
+    <p><strong><span style="color: 	#ff6961;">3. Contraste:</span></strong> O contraste é utilizado para destacar elementos importantes, utilizando diferenças de cor, tamanho e forma para chamar a atenção.</p>
+    <p><strong><span style="color: 	#ff6961;">4. Proximidade:</span></strong> A proximidade agrupa elementos relacionados entre si, organizando a informação de maneira clara e acessível.</p>
+</section>
+
+<section>
+    <h2>Peças Gráficas Escolhidas</h2>
+    <ul>
+        <li>Cartaz Promocional de Evento Cultural: 48° Cartaz Festival do Folclore - Olímpia-SP</li>
+        <li>Poster promocional do filme Prometheus</li>
+        <li>Poster promocional do filme Alice Through the looking glass</li>
+        <li>Menu do jogo Super Smash Bros 4</li>
+		<li>Cardapio do restaurante Carmélia</li>
+		<li>Tela de seleção de personagem de The King of Fighters 2002 UM</li>
+		<li>Capa do jogo de Mega Drive: Turma da Mônica na Terra dos Monstros</li>
+		<li>Tela inicial da página web da Friv.com</li>
+    </ul>
+</section>
+
+<section>
+    <h2 class = right >1° Peça Gráfica</h2>
+
+	<h3 class = right>Cartaz Promocional de Evento Cultural: 48° Cartaz Festival do Folclore - Olímpia-SP</h3>
+	
+	<img src="Image/cartaz.jpg" width="350" height="550" align= "left" alt="Guilherme Alves" class="imagem-com-margem">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> O contraste entre as cores utilizadas no título e no fundo é eficiente, com o texto em verde e azul destacando-se sobre o fundo laranja. Isso torna o título legível e atrativo.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> No entanto, o contraste no texto das informações principais poderia ser melhorado. O uso de texto amarelo em um fundo que mistura diversas cores pode dificultar a leitura, especialmente em partes onde o fundo é claro.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> O alinhamento do texto é, em geral, bem organizado. O título e as informações principais estão centralizados, o que cria uma sensação de equilíbrio. </p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> Alguns elementos, como os logos na parte inferior, parecem um pouco desalinhados, especialmente em relação ao texto acima. Isso pode dar uma impressão de desordem.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> A repetição de cores e tipografia é eficaz, ajudando a criar uma identidade visual coesa para o evento. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Poderia haver mais consistência na aplicação de estilos de texto. Por exemplo, há uma mistura de estilos de fonte (negrito, regular) e cores que, embora adicionem variedade, também podem criar confusão.</p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Positivo: A proximidade dos elementos relacionados funciona bem, como o agrupamento do título e das datas, o que facilita a compreensão das informações mais importantes. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A área inferior do cartaz, onde os logos e outras informações estão agrupados, parece um pouco congestionada. Isso pode dificultar a visualização rápida das informações.</p>
+	
+</section>
+
+<section>
+    <h2>2° Peça Gráfica</h2>
+
+	<h3>Poster Promocional do Filme Prometheus</h3>
+	
+	<img src="Image/Prometheus.jpg" width="350" height="550" align= "right" alt="Guilherme Alves" class="imagem-com-margem-left">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong> A figura humana iluminada contrasta fortemente com cabeça na escuridão do fundo, criando uma tensão visual e destaca a inferioridade do ser humano na cena.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> No entanto, o texto promocional no meio do poster está em uma fonte minúscula e sua cor se mistura com a cor do plano de fundo (a fumaça), se tornando difícil de ler.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> O poster usa um alinhamento central forte, que atrai o olhar diretamente para o centro da imagem. </p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> A cor azulada e as sombras escuras são usadas consistentemente em todo o pôster, criando uma atmosfera de mistério, o que acaba sendo coerente com o tema de suspense do filme. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Positivo: Sem comentários. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A proximidade do texto com a figura humana pode limitar o uso do espaço negativo no pôster, tornando-o um pouco apertado na parte inferior.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O texto deve ser escrito em uma fonte maior e preferencialmente em uma cor diferente, ou alternativamente com bordas coloridas delimitando seus espaços.</p>
+	
+</section>
+
+<section>
+    <h2 class = "right" >3° Peça Gráfica</h2>
+
+	<h3 class = "right" >Poster promocional do filme Alice Through the looking glass </h3>
+	
+	<img src="Image/alice.png" width="350" height="550" align= "left" alt="Guilherme Alves" class="imagem-com-margem">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong>O contraste entre o fundo escuro do castelo e as cores claras da roupa da Rainha Branca faz com que a personagem se destaque, atraindo assim a atenção do observador.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong>  O contraste entre o texto "Anne Hathaway as the White Queen" e o fundo poderia ser maior. O texto em branco se mistura um pouco com as áreas mais claras do fundo, o que pode dificultar a leitura.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> O texto "Alice Through the Looking Glass" está bem alinhado à esquerda, complementando a silhueta da Rainha Branca e guiando o leitor para o texto quando ele observa a personagem. </p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> Há uma falta de alinhamento vertical entre os elementos textuais principais. Por exemplo, o título está alinhado a esquerda enquanto o nome da atriz está à esquerda, fazendo com (ao nosso ver) que haja uma ligeira desconexão visual entre os blocos de informação.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> A repetição das cores pastel (especialmente o rosa e lilás) na roupa da Rainha Branca, nas flores e no fundo cria uma harmonia visual agradável e coerente. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A repetição de elementos florais na borda direita da imagem pode competir com a atenção dedicada à personagem e ao título, tornando a composição um pouco carregada.</p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Positivo: A proximidade entre o texto do título ("Alice Through the Looking Glass") e a data de lançamento cria uma conexão clara entre essas informações, facilitando a leitura.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A proximidade entre a personagem principal e os personagens secundários na parte inferior direita poderia ser mais explorada para propor a ideia de conexão entre os personagens.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O texto deve ser escrito em uma fonte maior e preferencialmente em uma cor diferente, ou alternativamente com bordas coloridas delimitando seus espaços.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> Aumentar o contraste entre o texto "Anne Hathaway as the White Queen" e o fundo para garantir maior legibilidade, Centralizar os textos para que sigam uma linha visual comum, reduzir o número de elementos florais para que o pôster fique menos sobrecarreagado e reforçar a proximidade entre os personagens. É importante que o designer arranje seus elementos para criar uma harmonia visual clara.</p>
+	
+</section>
+
+<section>
+    <h2>4° Peça Gráfica</h2>
+
+	<h3>Menu do jogo Super Smash Bros </h3>
+	
+	<img src="Image/ssb.png" width="600" height="350" align= "right" alt="Guilherme Alves" class="imagem-com-margem-left">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong> O contraste de cores entre o vermelho e o branco do logo "SMASH" é forte e chama a atenção. A cor laranja do botão "Online" também se destaca, guiando o olhar do jogador.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Sem comentários</p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> O menu do jogo Super Smash Bros 4 utiliza elementos visuais sem ordenação dispostos sem preocupação com a visualização do usuário quando for jogar, dispostos de modo qualquer.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> A repetição do formato arredondado dos botões e do logo central cria uma sensação de unidade e coesão visual. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A repetição das cores poderia ser explorada de forma mais estratégica para criar grupos de elementos relacionados, facilitando assim a comunicação.</p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Sem comentários. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Os elementos do menu estão ordenados de forma que não existe uma distinção clara entre a função e utilidade dos botões, sem uma hierarquia visual e dispostos de forma aparentemente aleatória, sem sentido de relação. Um menu desorganizado pode confunir os jogadores e fazê-ls ficar frustrados com o produto.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O designer deve dispor os elementos de modo ordenado de forma a guiar os olhos do usuário e criar uma sensação de ordem. Além disso, é importante dispor os botões de forma a deixar claro sua possível utilidade e agrupar funções relacionadas perto uma das outras para melhor distribuição dos elementos para o jogador.</p>
+	
+</section>
+
+</section>
+
+<section>
+    <h2 class = "right" >5° Peça Gráfica</h2>
+
+	<h3 class = "right" > Cardapio do restaurante Carmélia</h3>
+	
+	<img src="Image/cardapio.jpg" width="350" height="550" align= "left" alt="Guilherme Alves" class="imagem-com-margem">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong> O contraste entre o fundo vermelho escuro com o texto com cores claras (branco, amarelo e bege) ajuda na leitura.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> O contraste entre as promoções poderia ser maior.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Sem comentários. </p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> O alinhamento dos elementos visuais poderia ser padronizado, criando uma composição mais harmoniosa.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> A repetição do layout para cada dia da semana cria uma estrutura visua consistente, facilitando a compreensão do cardápio. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Entretanto, a repetição excessiva do formato tornou o cardápio um pouco monótono.</p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Positivo: Os elementos "dia da semana, promoção , alimentos" estão próximos, facilitando a associação entre eles.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O Designer deve destacar as informações mais importantes, aumentandoo contraste entre as promoções, padronizar o alinhamento do texto e elementos visuais para garantir uma composição harmoniosa e melhorar a disposição dos textos e imagem para evitar o sentimento de monotonia.</p>
+	
+</section>
+
+<section>
+    <h2>6° Peça Gráfica</h2>
+
+	<h3>Tela de Seleção de personagem de The King of Fighters 2002 UM </h3>
+	
+	<img src="Image/kof.jpg" width="600" height="400" align= "right" alt="Guilherme Alves" class="imagem-com-margem-left">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong> O contraste entre os personagens coloridos e o fundo escuro destaca bem os personagens e facilita a escolha.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> O contraste entre os nomes dos personagens e o fundo poderia ser maior, especialmente para os nomes menores.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Os personagens estão centralizados em hexágonos, criando uma sensação de ordem e organização.</p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> A repetição do formato hexagonal para cada personagem cria uma estrutura visual consistente e agradável esteticamente.  </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Sem comentários. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A disposição dos personagens em hexágonos próximos uns dos outros atrapalha na intuição da formação de times pré-definidos do modo história como nos jogos anteriores.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O Designer poderia aumentar o contraste entre os nomes dos personagens e o fundo. Ele também poderia introduzir um espaçamento a cada três hexágonos para reforçar a ideia dos trios pré-definidos.</p>
+	
+</section>
+
+<section>
+    <h2 class = "right" >7° Peça Gráfica</h2>
+
+	<h3 class = "right" > Capa do jogo de Mega Drive: Turma da Mônica na Terra dos Monstros </h3>
+	
+	<img src="Image/monica.jpg" width="350" height="550" align= "left" alt="Guilherme Alves" class="imagem-com-margem">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong> O contraste entre as cores vibrantes dos personagens (Mônica e o monstro) e o fundo mais escuro cria um bom destaque visual. O Título "Turma da Mônica na Terra dos Monstros" também está bem contrastado do fundo bege.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> O contraste entre algumas das letras da logo "MEGA DRIVE", "textos em português" e "SEGA" e o fundo vermelho escuro poderia ser melhor.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> O alinhamento dos elementos é bastante preciso, com os personagens alinhados a esquerda e os textos do título alinhados com o bloco de imagem. </p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> O alinhamento da logo "MEGA DRIVE" poderia ser melhor. Ela parece um pouco deslocada em relação aos outros elementos.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong>  A repetição da fonte e do estilo das letras em todo o design cria uma unidade visual única e divertida que combina muito bem com a Turma da Mônica. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários. </p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Os elementos relacionados estão próximos, como o título do jogo e a imagem da Mônica.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O alinhamento do logo "MEGA DRIVE" poderia ter uma cor diferente para contrastar com o fundo vermelho escuro, poderia também se alinhar com o bloco de imagem da Mônica e o Monstro.</p>
+	
+</section>
+
+<section>
+    <h2>8° Peça Gráfica</h2>
+
+	<h3> Tela inicial da página web da Friv.com </h3>
+	
+	<img src="Image/friv.png" width="600" height="400" align= "right" alt="Guilherme Alves" class="imagem-com-margem-left">
+	
+	<h3><strong>1. Contraste!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo: </span></strong>  O contraste entre o fundo roxo escuro e os ícones coloridos torna os jogos facilmente identificáveis. O logo do Friv em amarelo sobre um fundo laranja também cria um bom contraste.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>2. Alinhamento!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Os ícones dos jogos estão bem alinhados em uma grade, o que facilita a navegação. </p>
+	
+	<p><strong><span style="color:	#ff6961;"> Ponto negativo:</span></strong> Sem comentários.</p>
+	
+	<h3><strong>3. Repetição!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Sem comentários. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A repetição excessiva do formato quadrado pode tornar a interface um pouco monótona. </p>
+	
+	<h3><strong>4. Proximidade!</strong></h3>
+	
+	<p><strong><span style="color: 	#ff6961;">Ponto positivo:</span></strong> Sem comentários. </p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ponto negativo:</span></strong> A proximidade entre os ícones pode dificultar a leitura dos títulos dos jogos, especialmente em telas menores.</p>
+	
+	<p><strong><span style="color: 	#ff6961;"> Ajustes sugeridos:</span></strong> O Designer pode procurar uma forma alternativa de dispor os ícones, por exemplo afastando a proximidade entre eles ou introduzindo um texto para acompanhar os ícones. Ele também poderia introduzir formatos diferentes aos ícones para introduzir mais diversidade à interface.</p>
+	
+</section>
+
+<footer>
+    <p>&copy; Por: Felipe Moreira e Guilherme Alves</p>
+</footer>
+
+  </body>
+</html>
